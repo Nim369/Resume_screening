@@ -1,3 +1,14 @@
+---
+title: Resume Screening
+emoji: 📄
+colorFrom: indigo
+colorTo: blue
+sdk: streamlit
+sdk_version: 1.40.2
+app_file: app.py
+pinned: false
+---
+
 # 📄 ResumeIQ — Smart Resume Screening & Ranking Pipeline
 
 ResumeIQ is an AI-powered resume screening and matching system that automatically evaluates candidates against a job description. It provides a visual dashboard for HR teams and hiring managers to analyze candidate qualifications, skill gaps, and experience fits.
@@ -26,9 +37,8 @@ The application supports three screening methodologies ranging from fast keyword
 ## 📁 Repository Structure
 
 ```text
-├── app/
-│   ├── app.py             # Main Streamlit web application
-│   └── requirements.txt   # Python dependencies (optimized for Python 3.13)
+├── app.py                 # Main Streamlit web application
+├── requirements.txt       # Python dependencies (optimized for Python 3.13)
 ├── utils/
 │   ├── parser.py          # PDF and DOCX file parser
 │   ├── skill_extractor.py # Regex-based fallback skill extractor
