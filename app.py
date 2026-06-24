@@ -32,7 +32,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # ── Path setup ──────────────────────────────────────────────────────────────
-UTILS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'utils'))
+if os.path.exists(os.path.join(os.path.dirname(__file__), 'utils')):
+    UTILS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'utils'))
+else:
+    UTILS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'utils'))
 sys.path.insert(0, UTILS_DIR)
 
 from parser          import load_all_resumes, load_job_description
