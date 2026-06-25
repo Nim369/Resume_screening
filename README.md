@@ -11,6 +11,10 @@ pinned: false
 
 # 📄 ResumeIQ — Smart Resume Screening & Ranking Pipeline
 
+🚀 **Live Demo:** [nimit0036-resume-screening.hf.space](https://nimit0036-resume-screening.hf.space)
+
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/nimit0036/resume_screening)
+
 ResumeIQ is an AI-powered resume screening and matching system that automatically evaluates candidates against a job description. It provides a visual dashboard for HR teams and hiring managers to analyze candidate qualifications, skill gaps, and experience fits.
 
 The application supports three screening methodologies ranging from fast keyword matching to state-of-the-art semantic ranking and LLM-assisted analysis.
