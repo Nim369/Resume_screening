@@ -144,7 +144,7 @@ def extract_via_llm(
     api_key:  str,
     is_jd:    bool = False,
     base_url: str  = "https://openrouter.ai/api/v1",
-    model:    str  = "openai/gpt-4o-mini",
+    model:    str  = "google/gemini-2.5-flash-lite",
 ) -> dict:
     """
     Extract structured data from a resume or JD using GPT-4o-mini.
