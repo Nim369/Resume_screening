@@ -295,21 +295,24 @@ def main():
 
         top_n = st.slider("Top N candidates", min_value=3, max_value=10, value=5)
 
-        # [NEW] — API key input shown only when NLP Pipeline is selected
-        api_key = ""
+        # Check if API key is in environment variables (for deployment security)
+        api_key = os.environ.get("OPENROUTER_API_KEY", "")
         if use_nlp:
-            st.divider()
-            st.markdown("### 🔑 OpenRouter API Key")
-            api_key = st.text_input(
-                "Paste your API key",
-                type="password",
-                placeholder="sk-or-v1-...",
-                help="Get a free key at openrouter.ai — needed for GPT-4o-mini extraction"
-            )
-            if not api_key:
-                st.warning("⚠️ API key required for NLP Pipeline method.")
+            if api_key:
+                st.success("🔑 API Key loaded from environment secrets")
             else:
-                st.success("✅ API key provided")
+                st.divider()
+                st.markdown("### 🔑 OpenRouter API Key")
+                api_key = st.text_input(
+                    "Paste your API key",
+                    type="password",
+                    placeholder="sk-or-v1-...",
+                    help="Get a free key at openrouter.ai — needed for GPT-4o-mini extraction"
+                )
+                if not api_key:
+                    st.warning("⚠️ API key required for NLP Pipeline method.")
+                else:
+                    st.success("✅ API key provided")
 
         st.divider()
         st.markdown("### 📊 Score Weights")
